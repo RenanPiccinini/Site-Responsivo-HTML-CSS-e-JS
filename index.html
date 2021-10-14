@@ -7,6 +7,18 @@
 
     <link rel="stylesheet" href="assets/css/estilo.css">
 
+    <script type="text/javascript">
+        window.onload = function(){
+            document.querySelector(".menuMobile").addEventListener("click", function(){ //quando clicar no .menuMobile ele faz a verificação
+                if(document.querySelector(".menu nav ul").style.display == 'flex') { //se estiver com display flex ele está sendo exibido, então quando clicar esconde
+                    document.querySelector(".menu nav ul").style.display = 'none';
+                } else { //senao vai estar com display none, então quando clicar mostra o menu
+                    document.querySelector(".menu nav ul").style.display = 'flex';
+                }
+            });
+        };
+    </script>
+
     <title>MediCenter</title>
 </head>
     <body>
@@ -19,6 +31,11 @@
 
                 <div class="menu">
                     <nav> <!-- Nav é para informar ao navegador que isso é um menu -->
+                        <div class="menuMobile"><!-- Botão do Menu que abre -->
+                            <div class="mm_line"></div>
+                            <div class="mm_line"></div>
+                            <div class="mm_line"></div>
+                        </div>
                         <ul>
                             <li class="active"><a href="">Home</a></li>
                             <li><a href="">Home</a></li>
@@ -392,5 +409,6 @@
 
             </div>
         </footer>
+
     </body>
 </html>
