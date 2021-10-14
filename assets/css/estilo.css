@@ -1,0 +1,545 @@
+* {
+    font-family: Arial;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 120px; /*altura do topo*/
+    display: flex; /*Tornou o topo flex para poder centralizar*/
+    justify-content: center; /* Centralizou o topo*/
+}
+
+.container {
+    display: flex; /*Pra ficar um do lado do outro*/
+    justify-content: space-between; /*Pra um ficar colado na esquerda e outro colado na direita do tamanho total do elemento*/
+    width: 990px;
+}
+.logo {
+    display: flex; /*Deixa a logo flexivel pra colocar centralizada*/
+    align-items: center; /*Centralizou a logo*/
+}
+
+.menu{
+    display: flex; /* Deixa o menu flexivel pra colocar centralizada*/
+    align-items: center; /*Centralizou o menu*/
+}
+
+nav ul,
+nav li {
+    list-style: none; /*tira as bolinhas de menu*/
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: flex; /*deixar os menus um do lado do outro*/
+}
+
+nav a{
+    display: block; /*Para poder fazer alterações*/
+    padding: 15px;
+    text-decoration: none; /*Pra tirar o sublinhado de link*/
+    text-transform: uppercase; /*Deixar todo menu em Maiúsculo*/
+    color: #727272;
+}
+
+nav .active a, /*Pra mudar a cor de fundo e letra quando clicar no link*/
+nav a:hover /*Quando passar o link muda a cor de fundo e da letra do link*/{
+    background-color: #39aae1;
+    color: #fff;
+}
+
+#banner {
+    background-image: url('../img/img1.jpg'); /*chama a imagem de fundo*/
+    background-position: center; /*Posicionar a imagem no centro da tela*/
+    background-size: cover; /*Pra imagem expandir em monitores grandes, e menores vai diminuir*/
+    height: 670px;
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.banner_headline {
+    flex: 1; /*Tamanho variável, vai preencher todo o tamanho restante de 770px(banner) já que definimos 210px para o banner_options*/
+    display: flex; /*pra ficar flexivel e poder centralizar mexer com ele*/
+    flex-direction: column; /*Pra ficar um abaixo do outro, estilo coluna*/
+    justify-content: center; /*Pra centralizar*/
+}
+
+.banner_headline h1 {
+    color: #fff;
+    font-size: 70px;
+    text-shadow: 0px 1px 0px #555555; /*Colocando sombra no texto do h1*/
+    margin: 0;
+    padding: 0;
+    max-width: 350px; /*Area fixa máxima do h1*/
+}
+
+.banner_headline h2 {
+    color: #fff;
+    font-size: 22px;
+    text-shadow: 0px 1px 0px #555555; /*Colocando sombra no texto do h2*/
+    margin: 0;
+    padding: 0;
+    max-width: 350px; /*Area fixa máxima do h2*/
+    margin-top: 30px;
+}
+
+.banner_options {
+    height: 210px;
+    display: flex;
+}
+
+.banner1,
+.banner2,
+.banner3 {
+    flex: 1; /*Pra ficarem com o mesmo tamanho, dividir o espaço total entre eles*/
+    padding: 20px;
+    color: #FFF;
+}
+
+.banner1 {
+    background-color: #39aae1;
+}
+
+.banner2 {
+    background-color: #0079c7;
+}
+
+.banner3 {
+    background-color: #2b4c99;
+}
+
+.banner_title {
+    font-size: 21px;
+}
+
+.banner_desc {
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.banner_options a { /*Botão Read more*/
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 5px;
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.banner_hours {
+    margin-top: 20px;
+}
+.banner_hours1 {
+    border-top: 1PX solid rgba(255, 255, 255, 0.4);
+}
+.banner_hours1,
+.banner_hours2,
+.banner_hours3 {
+    display: flex; /*Pra ficar flexivel*/
+    font-size: 12px;
+    justify-content: space-between; /*Pra um ficar colado na esquerda e outro colado na direita do tamanho total do elemento*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 0;
+    margin-top: 5PX;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#geral {
+    display: flex;
+    justify-content: center;
+}
+
+#geral section {
+    flex: 2;
+}
+
+#geral aside {
+    flex: 1;
+}
+
+.widget_title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.widget_title_texts { /*Titulos*/
+    color: #000;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.widget_title_bar { /*Barrinha abaixo do titulo*/
+    width: 50px;
+    height: 2px;
+    background-color: #36a9e1;
+    margin-top: 10px;
+}
+
+.ret1 {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.ret2 {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.ret3 {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.div1 {
+    width: 140px;
+    height: 140px;
+    background-color: #36a9e1;
+    display: flex; /*Necessário para alinhar o texto bem no meio*/
+    align-items: center; /*Necessário para alinhar o texto bem no meio*/
+    justify-content: center /*Necessário para alinhar o texto bem no meio*/
+}
+
+.div2 {
+    width: 140px;
+    height: 140px;
+    background-color: #36a9e1;
+    display: flex; /*Necessário para alinhar o texto bem no meio*/
+    align-items: center; /*Necessário para alinhar o texto bem no meio*/
+    justify-content: center /*Necessário para alinhar o texto bem no meio*/
+}
+
+.div3 {
+    width: 140px;
+    height: 140px;
+    background-color: #36a9e1;
+    display: flex; /*Necessário para alinhar o texto bem no meio*/
+    align-items: center; /*Necessário para alinhar o texto bem no meio*/
+    justify-content: center /*Necessário para alinhar o texto bem no meio*/
+}
+
+.div4 {
+    width: 140px;
+    height: 140px;
+    background-color: #36a9e1;
+    display: flex; /*Necessário para alinhar o texto bem no meio*/
+    align-items: center; /*Necessário para alinhar o texto bem no meio*/
+    justify-content: center /*Necessário para alinhar o texto bem no meio*/
+}
+
+.div5 {
+    width: 140px;
+    height: 140px;
+    background-color: #36a9e1;
+    display: flex; /*Necessário para alinhar o texto bem no meio*/
+    align-items: center; /*Necessário para alinhar o texto bem no meio*/
+    justify-content: center /*Necessário para alinhar o texto bem no meio*/
+}
+
+.div6 {
+    width: 140px;
+    height: 140px;
+    background-color: #36a9e1;
+    display: flex; /*Necessário para alinhar o texto bem no meio*/
+    align-items: center; /*Necessário para alinhar o texto bem no meio*/
+    justify-content: center /*Necessário para alinhar o texto bem no meio*/
+}
+
+.contact{
+    display: flex;
+}
+
+.phone_text {
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 18px;
+    width: 100%;
+    color: #555;
+    font-size: 14px;
+    border-bottom: 2px solid #ddd;
+}
+
+.phone_img img{
+    width: 25px;
+}
+
+/*.phone_img img:hover {
+    
+}*/
+
+.email_text {
+    padding-left: 5px;
+    padding-top: 20px;
+    padding-bottom: 22px;
+    width: 100%;
+    color: #555;
+    font-size: 14px;
+    border-bottom: 2px solid #ddd;
+}
+
+.email_img img{
+    width: 27px;
+    padding-top: 15px;
+}
+
+
+.contact_img img{
+    width: 25px;
+    padding-top: 17px;
+    padding-bottom: 18px;
+}
+
+.contact_text {
+    border-bottom: 2px solid #ddd;
+    padding-left: 10px;
+    margin-top: 20px;
+    width: 100%;
+    color: #555;
+    font-size: 14px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap; /*Da a liberdade para o navegador quebrar a linha das noticias, mas precisa definir um tamanho minimo pra cada noticia(feito no article)*/
+}
+
+article {
+    flex: 1; /*Informa que as noticias vão ser todas do mesmo tamanho (Já é padrão assim)*/
+    min-width: 300px; /*Defini o tamanho minimo de cada noticia, assim ele quebra linha caso precise*/
+    margin-right: 20px;
+}
+
+article a{
+    text-decoration: none; /*Remove o sublinhado de link (a)*/
+}
+
+article .news_data{
+    display: flex; /*para os itens ficarem um do lado do outro*/
+}
+
+article .news_posted_at {
+    background-color: #2b4c99;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px;
+    margin-right: 2px;
+}
+
+article .news_comments {
+    background-color: #39aae1;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px;
+}
+
+article .news_thumbnail{
+    margin-top: 30px;
+}
+
+article .news_thumbnail img{
+    width: 100%;
+    height: auto;
+}
+
+article .news_title {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #000;
+    font-size: 23px;
+}
+
+article .news_resume {
+    font-size: 14px;
+    line-height: 20px; /*Controlar o espaçamento entre as linhas*/
+    color: #5c5c5c;
+    margin-bottom: 30px;
+}
+
+footer{
+    display: flex; /*Pra conseguir mexer com o conteudo e para a justify-content funcionar*/
+    justify-content: center; /*Centralizar co conteúdo*/
+    background-color: #1e1e1e;
+}
+
+.footer_menu{
+    display: flex; /*pra conseguir mexer com as 3 divs que estão dentro dessa e centraliza-las*/
+}
+
+.flex_column {
+    flex-direction: column; /*pra deixar o footer_menu e footer_area um abaixo do outro e não do lado*/
+}
+
+.fm_1, 
+.fm_2,
+.fm_3 {
+    flex: 1; /*pra deixar as 3 divs na mesma linha*/
+    color: #fff;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.fm_1 a, 
+.fm_2 a,
+.fm_3 a{
+     display: block; /*SEMPRE COLLOCAR ISSO Pra poder mexer nas margins e padding*/
+     margin-top:15px;
+     margin-bottom: 10px;
+     font-size: 15px;
+     color: #fff;
+     text-decoration: none;
+} 
+
+.fm_1 a:hover, 
+.fm_2 a:hover,
+.fm_3 a:hover{
+    text-decoration: underline;
+}
+
+.fm_1 {
+    background-color: #39aae1;
+}
+
+.fm_2{
+    background-color: #0079c7;
+}
+
+.fm_3{
+    background-color: #2b4c99;
+}
+
+.footer_area {
+    display: flex;
+}
+
+.footer_areaitem {
+    flex: 1;
+    color: #fff;
+}
+
+footer .widget_title_texts {
+    color: #fff;
+}
+
+.footer_copy {
+    border-top: 1px solid #2c2c2c;
+    height: 40px;
+    line-height: 40px;
+    color: #5c5c5c;
+    font-size: 11px;
+    margin-top: 30px;
+}
+
+.footer_copy a{
+    text-decoration: none;
+    color: #D5D5D5;
+}
+
+.footer_copy a:hover{
+    text-decoration: underline;
+}
+
+.footer_text {
+    font-size: 13px;
+    color: #888888;
+}
+
+.footer_text2 {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #888888;
+    line-height: 17px;
+}
+
+.footer_contact {
+    margin-top: 37px;
+    font-size: 13px;
+    color: #888888;
+    line-height: 17px;
+}
+
+.footer_contact a{
+    text-decoration: none;
+    color: #D5D5D5;
+    margin-right: 20px;
+}
+
+.footer_contact a:hover{
+    text-decoration: underline;
+}
+
+.footer_1 {
+    display: flex; /*habilita mexer com eles*/
+    flex: 1; /*divide o espaço total entre eles*/
+    justify-content: space-between; /*fica colado um em cada canto*/
+}
+
+.posts {
+    font-size: 11px;
+    color: #42B3E5;
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+.posts a{
+    text-decoration: none;
+    font-size: 13px;
+    color: #D5D5D5;
+}
+
+.posts a:hover{
+    text-decoration: underline;
+}
+
+.tweets {
+    font-size: 13px;
+    color: #888;
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+.tweets a{
+    text-decoration: none;
+    font-size: 13px;
+    color: #D5D5D5;
+}
+
+.tweets a:hover{
+    text-decoration: underline;
+}
+
+.tweets_data{
+    font-size: 11px;
+    color: #42B3E5;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.footer_img {
+    width: 40px;
+    display: flex;
+    flex: 1;
+    background-color: #666;
+    margin-top: 25px;
+}
+
+.footer_img img{
+    width: 30px;
+    padding-left: 4px;
+    padding-top: 4px;
+}
